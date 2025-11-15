@@ -33,7 +33,7 @@ const Hero = () => {
       </div>
 
       <div className="md:w-1/2 flex max-h-[500px] justify-center md:justify-end mt-10 md:mt-0 ">
-        <div className="md:w-[80%] overflow-hidden shadow-secondary shadow-lg rounded-[40%_0_40%_0]">
+        <div className="md:w-[80%] border-light border-2 overflow-hidden shadow-secondary shadow-lg rounded-[40%_0_40%_0]">
           <img
             src={heroImage}
             alt="AI Detection Illustration"

@@ -62,9 +62,9 @@ const LesionSlider = () => {
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
-              <div className="bg-background rounded-[70%_70%_20%_20%] w-80 md:w-96 h-96 md:h-[28rem] shadow-2xl flex flex-col items-center justify-center p-8 border-2 border-gray-200 hover:border-secondary cursor-pointer">
+              <div className="bg-background rounded-[10%_10%_10%_10%] w-80 md:w-96 h-96 md:h-[28rem] shadow-2xl flex flex-col items-center justify-center p-8 border-2 border-light hover:border-secondary cursor-pointer">
                 <div className="text-center items-center flex flex-col">
-                  <div className="overflow-hidden rounded-full bg-white mb-6 h-48 md:h-60 w-48 md:w-60 flex items-center justify-center">
+                  <div className="overflow-hidden rounded-4xl border-2 border-secondary mb-6 h-48 md:h-56 w-48 md:w-56 flex items-center justify-center">
                     <img
                       src={card.image}
                       alt={card.title}
