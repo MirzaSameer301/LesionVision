@@ -59,3 +59,66 @@ import { Upload, Brain, Database, FileText, Download } from 'lucide-react';
        position: 'right'
      }
    ];
+import { TrendingUp, Target, CheckCircle, Shield, Microscope } from 'lucide-react';
+   export const detections = [
+    {
+      id: 1,
+      name: 'Streaks',
+      description: 'Linear, radial extensions at the edges of a lesion. Often associated with active growth phases in melanomas and high-risk lesions.',
+      icon: TrendingUp,
+      color: 'from-red-500 to-orange-500',
+      bgColor: 'bg-red-50',
+    },
+    {
+      id: 2,
+      name: 'Globules',
+      description: 'Round, oval, well-defined dots or clumps of pigment. Commonly seen in benign moles (melanocytic nevi) but can also appear in melanomas.',
+      icon: Target,
+      color: 'from-blue-500 to-cyan-500',
+      bgColor: 'bg-blue-50',
+    },
+    {
+      id: 3,
+      name: 'Milia-like Cysts',
+      description: 'Small white or yellowish circular structures representing tiny keratin-filled cysts. A classic dermoscopic sign of seborrheic keratosis.',
+      icon: CheckCircle,
+      color: 'from-yellow-500 to-amber-500',
+      bgColor: 'bg-yellow-50',
+    },
+    {
+      id: 4,
+      name: 'Pigment Network',
+      description: 'A grid-like pattern of brown lines over a lighter background. Indicates a melanocytic lesion and is observed in both benign nevi and melanoma.',
+      icon: Shield,
+      color: 'from-green-500 to-emerald-500',
+      bgColor: 'bg-green-50',
+    },
+    {
+      id: 5,
+      name: 'Negative Network',
+      description: 'White, "negative" web-like lines that create a reverse network pattern. Considered a high-risk dermoscopic feature strongly associated with melanoma.',
+      icon: Microscope,
+      color: 'from-purple-500 to-pink-500',
+      bgColor: 'bg-purple-50',
+    },
+  ];
+  export const teamMembers = [
+    {
+      name: 'Sameer Ijaz',
+      title: 'Full Stack Developer',
+      role: 'Backend & API Development',
+      gradient: 'from-blue-500 to-cyan-500',
+    },
+    {
+      name: 'Hayya Fatima',
+      title: 'Graphic Designer',
+      role: 'UI/UX Design and Content Creation',
+      gradient: 'from-purple-500 to-pink-500',
+    },
+    {
+      name: 'Zain Ahmed Khan',
+      title: 'Frontend Developer',
+      role: 'Frontend Development',
+      gradient: 'from-green-500 to-emerald-500',
+    },
+  ];

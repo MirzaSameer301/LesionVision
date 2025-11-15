@@ -12,6 +12,7 @@ import About from "./pages/About.jsx";
 import History from "./pages/History.jsx";
 import Header from "./components/Header.jsx";
 import ScrollToHashElement from "./components/ScrollToHashElement.jsx";
+import Footer from "./components/Footer.jsx";
 function App() {
   const { user, isAuthenticated, loading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -38,10 +39,11 @@ function App() {
         <Route path="/signup" element={!user ? <SignUp /> : <Home />} />
         <Route path="/forget-password" element={!user ? <ForgetPassword /> : <Home />} />
         <Route path="/reset-password/:token" element={!user ? <ResetPassworrd /> : <Home />} />
-        <Route path="/scan-lesion" element={<ScanLesion />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/about-us" element={<About />} />
+        <Route path="/scan-lesion" element={user ? <ScanLesion /> : <Login />} />
+        <Route path="/history" element={user ? <History /> : <Login />} />
+        <Route path="/about-us" element={user ? <About /> : <Login  />} />
       </Routes>
+      {user && isAuthenticated && <Footer />}
     </>
   );
 }

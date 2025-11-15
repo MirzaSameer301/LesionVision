@@ -72,7 +72,7 @@ const LesionSlider = () => {
                     />
                   </div>
                   <h3 className="text-2xl font-bold text-light mb-4">
-                    {card.title}
+                    {card.id}. {card.title}
                   </h3>
                   <p className="text-tertiary text-sm ">{card.description}</p>
                 </div>
