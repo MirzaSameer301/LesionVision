@@ -23,8 +23,8 @@ const Header = () => {
     <header className="relative z-50 md:px-14 bg-background">
       <main className="flex flex-row items-center justify-between p-3 text-light">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-light to-secondary rounded-lg flex items-center justify-center">
-            <span className="text-2xl">🩺</span>
+          <div className="w-10 h-10 bg-gradient-to-br from-light to-tertiary rounded-lg flex items-center justify-center">
+            <span className="text-2xl">🔬</span>
           </div>
           <h3 className="text-2xl font-bold bg-gradient-to-r from-light to-primary bg-clip-text text-transparent">
             LesionVision
