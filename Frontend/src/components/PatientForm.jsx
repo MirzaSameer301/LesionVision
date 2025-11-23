@@ -1,6 +1,6 @@
 // src/components/PatientForm.jsx
 import React from "react";
-import { User, Phone, Calendar, FileText } from "lucide-react";
+import { User, Phone, Calendar, FileText, Mars } from "lucide-react";
 
 const PatientForm = ({ patientData, onChange, onSaveReport }) => {
   return (
@@ -55,21 +55,29 @@ const PatientForm = ({ patientData, onChange, onSaveReport }) => {
             />
           </div>
         </div>
-
         <div>
-          <label className="block text-tertiary text-xs md:text-sm font-medium mb-2">Date</label>
-          <input
-            type="date"
-            name="date"
-            value={patientData.date}
+          <label className="block text-tertiary text-xs md:text-sm font-medium mb-2">Gender *</label>
+          <div className="relative">
+          <Mars  className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-tertiary" />
+          <select
+            name="gender"
+            value={patientData.gender}
+            required
             onChange={onChange}
-            className="w-full px-4 py-2.5 md:py-3 bg-secondary border border-tertiary/20 rounded-xl text-light focus:outline-none focus:border-primary transition-colors text-sm md:text-base"
-          />
+          className="w-full pl-10 md:pl-11 pr-4 py-2.5 md:py-3 bg-secondary border border-tertiary/20 rounded-xl text-tertiary placeholder-tertiary focus:outline-none focus:border-primary transition-colors text-sm md:text-base">
+            <option value="" disabled>
+              Select gender
+            </option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select> 
+          </div>
         </div>
 
         <button
           onClick={onSaveReport}
-          className="w-full bg-gradient-to-r from-light to-tertiary text-secondary px-4 md:px-6 py-3 md:py-4 rounded-xl font-bold shadow-md shadow-light hover:shadow-lg cursor-pointer hover:-translate-y-0.5 transform transition-all duration-200 flex items-center justify-center gap-2 text-sm md:text-base"
+          className="w-full bg-gradient-to-r from-light to-tertiary text-secondary px-4 md:px-6 py-3 md:py-4 rounded-xl font-bold shadow-md  hover:shadow-lg cursor-pointer hover:-translate-y-0.5 transform transition-all duration-200 flex items-center justify-center gap-2 text-sm md:text-base"
         >
           Save Report
         </button>

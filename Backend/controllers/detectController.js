@@ -14,6 +14,7 @@ async function detectSingleLesion(lesionType, imageBase64) {
   try {
     const apiUrl = LESION_API[lesionType];
 
+    
     // const response = await axios.post(apiUrl, { image: imageBase64 });
 
     // return {

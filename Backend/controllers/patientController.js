@@ -29,6 +29,7 @@ exports.createPatientWithLesions = async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
+    console.error("Error creating patient with lesions:", error);
   }
 };
 
@@ -39,6 +40,18 @@ exports.getPatients = async (req, res) => {
     });
 
     res.json({ success: true, patients });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+exports.getPatientById = async (req, res) => {
+  try {
+    const patient = await Patient.findById(req.params.id); 
+    if (!patient) {
+      return res.status(404).json({ success: false, message: "Patient not found" });
+    } 
+    res.json({ success: true, patient });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }

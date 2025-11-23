@@ -5,13 +5,15 @@ const {
   createPatientWithLesions,
   getPatients,
   updatePatient,
-  updatePatientLesions,
   deletePatient,
+  getPatientById,
 } = require("../controllers/patientController.js");
 
 router.post("/create", createPatientWithLesions);
 
 router.get("/:userID", getPatients);
+
+router.get("/getPatient/:id", getPatientById);
 
 router.put("/update/:id", updatePatient);
 

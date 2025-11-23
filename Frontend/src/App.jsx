@@ -13,6 +13,8 @@ import History from "./pages/History.jsx";
 import Header from "./components/Header.jsx";
 import ScrollToHashElement from "./components/ScrollToHashElement.jsx";
 import Footer from "./components/Footer.jsx";
+import ReportView from "./components/ReportView.jsx";
+import ReportPDF from "./pages/ReportPDF.jsx";
 function App() {
   const { user, isAuthenticated, loading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -42,6 +44,8 @@ function App() {
         <Route path="/scan-lesion" element={user ? <ScanLesion /> : <Login />} />
         <Route path="/history" element={user ? <History /> : <Login />} />
         <Route path="/about-us" element={user ? <About /> : <Login  />} />
+        <Route path="/report-pdf/:id" element={user ? <ReportPDF /> : <Login />} />
+        <Route path="/view-report/:id" element={user ? <ReportView /> : <Login />} />
       </Routes>
       {user && isAuthenticated && <Footer />}
     </>
