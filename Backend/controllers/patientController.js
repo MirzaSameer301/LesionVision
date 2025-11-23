@@ -8,6 +8,7 @@ exports.createPatientWithLesions = async (req, res) => {
       patientPhone,
       patientAge,
       patientGender,
+      patientLesionImage,
       lesions,
     } = req.body;
 
@@ -17,6 +18,7 @@ exports.createPatientWithLesions = async (req, res) => {
       patientPhone,
       patientAge,
       patientGender,
+      patientLesionImage,
       lesions,
     });
 

@@ -23,7 +23,7 @@ const patientSchema = new mongoose.Schema(
     patientPhone: { type: String, required: true },
     patientAge: { type: Number, required: true },
     patientGender: { type: String, required: true, enum: ["Male", "Female", "Other"] },
-
+    patientLesionImage: { type: String, required: true },
     lesions: {
       streaks: { type: lesionInfoSchema, default: () => ({}) },
       globules: { type: lesionInfoSchema, default: () => ({}) },
